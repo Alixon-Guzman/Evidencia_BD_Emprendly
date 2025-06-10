@@ -3,6 +3,12 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from .database import Base
 
+class Categorias(Base):
+    __tablename__ = "categorias"
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String(40))
+
+
 
 class Usuarios(Base):
     __tablename__ = "usuarios"
